@@ -1,6 +1,6 @@
 # ChangeLanguage
 
-多语言，国际化
+ios  objective-c 多语言，国际化
 
 轻量级 手动切换语言，实时渲染，完美的内存引用
 
