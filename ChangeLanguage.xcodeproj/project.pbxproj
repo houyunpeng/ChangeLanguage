@@ -15,6 +15,11 @@
 		38362B3921C11C99006C6DD4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38362B3821C11C99006C6DD4 /* main.m */; };
 		38362B4321C11C99006C6DD4 /* TestChangeLanguageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38362B4221C11C99006C6DD4 /* TestChangeLanguageTests.m */; };
 		38362B4E21C11C99006C6DD4 /* TestChangeLanguageUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38362B4D21C11C99006C6DD4 /* TestChangeLanguageUITests.m */; };
+		38362B5E21C11CFC006C6DD4 /* LanguageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 38362B5C21C11CFC006C6DD4 /* LanguageManager.m */; };
+		38362B6121C138C9006C6DD4 /* lang.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38362B6021C138C8006C6DD4 /* lang.plist */; };
+		4B2A30ABC0ED931AD828F1FC /* libPods-TestChangeLanguage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F6A3149503C8FB25242565C /* libPods-TestChangeLanguage.a */; };
+		98976EFAE559BDD16CB8CFB2 /* libPods-TestChangeLanguageTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B705FDF003A2927F76C6B02 /* libPods-TestChangeLanguageTests.a */; };
+		BD102AD5DF58379D6DEE2528 /* libPods-TestChangeLanguageUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 825E50E9511B25A3E4789F69 /* libPods-TestChangeLanguageUITests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		38362B2621C11C97006C6DD4 /* TestChangeLanguage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestChangeLanguage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F6A3149503C8FB25242565C /* libPods-TestChangeLanguage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestChangeLanguage.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		38362B2621C11C97006C6DD4 /* ChangeLanguage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChangeLanguage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38362B2921C11C97006C6DD4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		38362B2A21C11C97006C6DD4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		38362B2C21C11C97006C6DD4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -45,12 +51,24 @@
 		38362B3521C11C99006C6DD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38362B3721C11C99006C6DD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38362B3821C11C99006C6DD4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		38362B3E21C11C99006C6DD4 /* TestChangeLanguageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestChangeLanguageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		38362B3E21C11C99006C6DD4 /* ChangeLanguageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChangeLanguageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38362B4221C11C99006C6DD4 /* TestChangeLanguageTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestChangeLanguageTests.m; sourceTree = "<group>"; };
 		38362B4421C11C99006C6DD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		38362B4921C11C99006C6DD4 /* TestChangeLanguageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestChangeLanguageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		38362B4921C11C99006C6DD4 /* ChangeLanguageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChangeLanguageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38362B4D21C11C99006C6DD4 /* TestChangeLanguageUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestChangeLanguageUITests.m; sourceTree = "<group>"; };
 		38362B4F21C11C99006C6DD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38362B5C21C11CFC006C6DD4 /* LanguageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageManager.m; sourceTree = "<group>"; };
+		38362B5D21C11CFC006C6DD4 /* LanguageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanguageManager.h; sourceTree = "<group>"; };
+		38362B5F21C13533006C6DD4 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		38362B6021C138C8006C6DD4 /* lang.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = lang.plist; sourceTree = "<group>"; };
+		6B705FDF003A2927F76C6B02 /* libPods-TestChangeLanguageTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestChangeLanguageTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		825E50E9511B25A3E4789F69 /* libPods-TestChangeLanguageUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestChangeLanguageUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		90DEED1D50A1C3D45040F5C0 /* Pods-TestChangeLanguage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestChangeLanguage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestChangeLanguage/Pods-TestChangeLanguage.debug.xcconfig"; sourceTree = "<group>"; };
+		9CF87D0E97CB8ADF100C9818 /* Pods-TestChangeLanguageUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestChangeLanguageUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestChangeLanguageUITests/Pods-TestChangeLanguageUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A409931A49E57908C8ABFE67 /* Pods-TestChangeLanguageTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestChangeLanguageTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestChangeLanguageTests/Pods-TestChangeLanguageTests.release.xcconfig"; sourceTree = "<group>"; };
+		AFBC83245AFB3B101685AF33 /* Pods-TestChangeLanguageUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestChangeLanguageUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestChangeLanguageUITests/Pods-TestChangeLanguageUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C4EEA3532F09DF43DF957818 /* Pods-TestChangeLanguage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestChangeLanguage.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestChangeLanguage/Pods-TestChangeLanguage.release.xcconfig"; sourceTree = "<group>"; };
+		FA641B378C1A6679BDCDCE0E /* Pods-TestChangeLanguageTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestChangeLanguageTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestChangeLanguageTests/Pods-TestChangeLanguageTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B2A30ABC0ED931AD828F1FC /* libPods-TestChangeLanguage.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98976EFAE559BDD16CB8CFB2 /* libPods-TestChangeLanguageTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,28 +92,45 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD102AD5DF58379D6DEE2528 /* libPods-TestChangeLanguageUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		070045BE5667C8D7C8EB8A4E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				90DEED1D50A1C3D45040F5C0 /* Pods-TestChangeLanguage.debug.xcconfig */,
+				C4EEA3532F09DF43DF957818 /* Pods-TestChangeLanguage.release.xcconfig */,
+				FA641B378C1A6679BDCDCE0E /* Pods-TestChangeLanguageTests.debug.xcconfig */,
+				A409931A49E57908C8ABFE67 /* Pods-TestChangeLanguageTests.release.xcconfig */,
+				9CF87D0E97CB8ADF100C9818 /* Pods-TestChangeLanguageUITests.debug.xcconfig */,
+				AFBC83245AFB3B101685AF33 /* Pods-TestChangeLanguageUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		38362B1D21C11C97006C6DD4 = {
 			isa = PBXGroup;
 			children = (
+				38362B5B21C11CC3006C6DD4 /* Lang */,
 				38362B2821C11C97006C6DD4 /* TestChangeLanguage */,
 				38362B4121C11C99006C6DD4 /* TestChangeLanguageTests */,
 				38362B4C21C11C99006C6DD4 /* TestChangeLanguageUITests */,
 				38362B2721C11C97006C6DD4 /* Products */,
+				070045BE5667C8D7C8EB8A4E /* Pods */,
+				C4A097B1B8CDD1935A06476A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		38362B2721C11C97006C6DD4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				38362B2621C11C97006C6DD4 /* TestChangeLanguage.app */,
-				38362B3E21C11C99006C6DD4 /* TestChangeLanguageTests.xctest */,
-				38362B4921C11C99006C6DD4 /* TestChangeLanguageUITests.xctest */,
+				38362B2621C11C97006C6DD4 /* ChangeLanguage.app */,
+				38362B3E21C11C99006C6DD4 /* ChangeLanguageTests.xctest */,
+				38362B4921C11C99006C6DD4 /* ChangeLanguageUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -105,6 +142,7 @@
 				38362B2A21C11C97006C6DD4 /* AppDelegate.m */,
 				38362B2C21C11C97006C6DD4 /* ViewController.h */,
 				38362B2D21C11C97006C6DD4 /* ViewController.m */,
+				38362B5F21C13533006C6DD4 /* PrefixHeader.pch */,
 				38362B2F21C11C97006C6DD4 /* Main.storyboard */,
 				38362B3221C11C99006C6DD4 /* Assets.xcassets */,
 				38362B3421C11C99006C6DD4 /* LaunchScreen.storyboard */,
@@ -132,13 +170,34 @@
 			path = TestChangeLanguageUITests;
 			sourceTree = "<group>";
 		};
+		38362B5B21C11CC3006C6DD4 /* Lang */ = {
+			isa = PBXGroup;
+			children = (
+				38362B5D21C11CFC006C6DD4 /* LanguageManager.h */,
+				38362B5C21C11CFC006C6DD4 /* LanguageManager.m */,
+				38362B6021C138C8006C6DD4 /* lang.plist */,
+			);
+			path = Lang;
+			sourceTree = "<group>";
+		};
+		C4A097B1B8CDD1935A06476A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F6A3149503C8FB25242565C /* libPods-TestChangeLanguage.a */,
+				6B705FDF003A2927F76C6B02 /* libPods-TestChangeLanguageTests.a */,
+				825E50E9511B25A3E4789F69 /* libPods-TestChangeLanguageUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		38362B2521C11C97006C6DD4 /* TestChangeLanguage */ = {
+		38362B2521C11C97006C6DD4 /* ChangeLanguage */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 38362B5221C11C99006C6DD4 /* Build configuration list for PBXNativeTarget "TestChangeLanguage" */;
+			buildConfigurationList = 38362B5221C11C99006C6DD4 /* Build configuration list for PBXNativeTarget "ChangeLanguage" */;
 			buildPhases = (
+				75C7781C6F2449D80A40DD71 /* [CP] Check Pods Manifest.lock */,
 				38362B2221C11C97006C6DD4 /* Sources */,
 				38362B2321C11C97006C6DD4 /* Frameworks */,
 				38362B2421C11C97006C6DD4 /* Resources */,
@@ -147,15 +206,16 @@
 			);
 			dependencies = (
 			);
-			name = TestChangeLanguage;
+			name = ChangeLanguage;
 			productName = TestChangeLanguage;
-			productReference = 38362B2621C11C97006C6DD4 /* TestChangeLanguage.app */;
+			productReference = 38362B2621C11C97006C6DD4 /* ChangeLanguage.app */;
 			productType = "com.apple.product-type.application";
 		};
-		38362B3D21C11C99006C6DD4 /* TestChangeLanguageTests */ = {
+		38362B3D21C11C99006C6DD4 /* ChangeLanguageTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 38362B5521C11C99006C6DD4 /* Build configuration list for PBXNativeTarget "TestChangeLanguageTests" */;
+			buildConfigurationList = 38362B5521C11C99006C6DD4 /* Build configuration list for PBXNativeTarget "ChangeLanguageTests" */;
 			buildPhases = (
+				93FB1D9BC1D9230874A491B0 /* [CP] Check Pods Manifest.lock */,
 				38362B3A21C11C99006C6DD4 /* Sources */,
 				38362B3B21C11C99006C6DD4 /* Frameworks */,
 				38362B3C21C11C99006C6DD4 /* Resources */,
@@ -165,15 +225,16 @@
 			dependencies = (
 				38362B4021C11C99006C6DD4 /* PBXTargetDependency */,
 			);
-			name = TestChangeLanguageTests;
+			name = ChangeLanguageTests;
 			productName = TestChangeLanguageTests;
-			productReference = 38362B3E21C11C99006C6DD4 /* TestChangeLanguageTests.xctest */;
+			productReference = 38362B3E21C11C99006C6DD4 /* ChangeLanguageTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		38362B4821C11C99006C6DD4 /* TestChangeLanguageUITests */ = {
+		38362B4821C11C99006C6DD4 /* ChangeLanguageUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 38362B5821C11C99006C6DD4 /* Build configuration list for PBXNativeTarget "TestChangeLanguageUITests" */;
+			buildConfigurationList = 38362B5821C11C99006C6DD4 /* Build configuration list for PBXNativeTarget "ChangeLanguageUITests" */;
 			buildPhases = (
+				195097E72669DB7DEEDF58BB /* [CP] Check Pods Manifest.lock */,
 				38362B4521C11C99006C6DD4 /* Sources */,
 				38362B4621C11C99006C6DD4 /* Frameworks */,
 				38362B4721C11C99006C6DD4 /* Resources */,
@@ -183,9 +244,9 @@
 			dependencies = (
 				38362B4B21C11C99006C6DD4 /* PBXTargetDependency */,
 			);
-			name = TestChangeLanguageUITests;
+			name = ChangeLanguageUITests;
 			productName = TestChangeLanguageUITests;
-			productReference = 38362B4921C11C99006C6DD4 /* TestChangeLanguageUITests.xctest */;
+			productReference = 38362B4921C11C99006C6DD4 /* ChangeLanguageUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -210,7 +271,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 38362B2121C11C97006C6DD4 /* Build configuration list for PBXProject "TestChangeLanguage" */;
+			buildConfigurationList = 38362B2121C11C97006C6DD4 /* Build configuration list for PBXProject "ChangeLanguage" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -223,9 +284,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				38362B2521C11C97006C6DD4 /* TestChangeLanguage */,
-				38362B3D21C11C99006C6DD4 /* TestChangeLanguageTests */,
-				38362B4821C11C99006C6DD4 /* TestChangeLanguageUITests */,
+				38362B2521C11C97006C6DD4 /* ChangeLanguage */,
+				38362B3D21C11C99006C6DD4 /* ChangeLanguageTests */,
+				38362B4821C11C99006C6DD4 /* ChangeLanguageUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -237,6 +298,7 @@
 			files = (
 				38362B3621C11C99006C6DD4 /* LaunchScreen.storyboard in Resources */,
 				38362B3321C11C99006C6DD4 /* Assets.xcassets in Resources */,
+				38362B6121C138C9006C6DD4 /* lang.plist in Resources */,
 				38362B3121C11C97006C6DD4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,6 +319,75 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		195097E72669DB7DEEDF58BB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestChangeLanguageUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75C7781C6F2449D80A40DD71 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestChangeLanguage-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93FB1D9BC1D9230874A491B0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestChangeLanguageTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		38362B2221C11C97006C6DD4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -265,6 +396,7 @@
 				38362B2E21C11C97006C6DD4 /* ViewController.m in Sources */,
 				38362B3921C11C99006C6DD4 /* main.m in Sources */,
 				38362B2B21C11C97006C6DD4 /* AppDelegate.m in Sources */,
+				38362B5E21C11CFC006C6DD4 /* LanguageManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,12 +421,12 @@
 /* Begin PBXTargetDependency section */
 		38362B4021C11C99006C6DD4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 38362B2521C11C97006C6DD4 /* TestChangeLanguage */;
+			target = 38362B2521C11C97006C6DD4 /* ChangeLanguage */;
 			targetProxy = 38362B3F21C11C99006C6DD4 /* PBXContainerItemProxy */;
 		};
 		38362B4B21C11C99006C6DD4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 38362B2521C11C97006C6DD4 /* TestChangeLanguage */;
+			target = 38362B2521C11C97006C6DD4 /* ChangeLanguage */;
 			targetProxy = 38362B4A21C11C99006C6DD4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -433,9 +565,11 @@
 		};
 		38362B5321C11C99006C6DD4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90DEED1D50A1C3D45040F5C0 /* Pods-TestChangeLanguage.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = /Users/hyp/Desktop/test1/TestChangeLanguage/TestChangeLanguage/PrefixHeader.pch;
 				INFOPLIST_FILE = TestChangeLanguage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -449,9 +583,11 @@
 		};
 		38362B5421C11C99006C6DD4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4EEA3532F09DF43DF957818 /* Pods-TestChangeLanguage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = /Users/hyp/Desktop/test1/TestChangeLanguage/TestChangeLanguage/PrefixHeader.pch;
 				INFOPLIST_FILE = TestChangeLanguage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -465,6 +601,7 @@
 		};
 		38362B5621C11C99006C6DD4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA641B378C1A6679BDCDCE0E /* Pods-TestChangeLanguageTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -477,12 +614,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = hyp.TestChangeLanguageTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestChangeLanguage.app/TestChangeLanguage";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChangeLanguage.app/ChangeLanguage";
 			};
 			name = Debug;
 		};
 		38362B5721C11C99006C6DD4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A409931A49E57908C8ABFE67 /* Pods-TestChangeLanguageTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -495,12 +633,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = hyp.TestChangeLanguageTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestChangeLanguage.app/TestChangeLanguage";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChangeLanguage.app/ChangeLanguage";
 			};
 			name = Release;
 		};
 		38362B5921C11C99006C6DD4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CF87D0E97CB8ADF100C9818 /* Pods-TestChangeLanguageUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TestChangeLanguageUITests/Info.plist;
@@ -518,6 +657,7 @@
 		};
 		38362B5A21C11C99006C6DD4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFBC83245AFB3B101685AF33 /* Pods-TestChangeLanguageUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TestChangeLanguageUITests/Info.plist;
@@ -536,7 +676,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		38362B2121C11C97006C6DD4 /* Build configuration list for PBXProject "TestChangeLanguage" */ = {
+		38362B2121C11C97006C6DD4 /* Build configuration list for PBXProject "ChangeLanguage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				38362B5021C11C99006C6DD4 /* Debug */,
@@ -545,7 +685,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		38362B5221C11C99006C6DD4 /* Build configuration list for PBXNativeTarget "TestChangeLanguage" */ = {
+		38362B5221C11C99006C6DD4 /* Build configuration list for PBXNativeTarget "ChangeLanguage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				38362B5321C11C99006C6DD4 /* Debug */,
@@ -554,7 +694,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		38362B5521C11C99006C6DD4 /* Build configuration list for PBXNativeTarget "TestChangeLanguageTests" */ = {
+		38362B5521C11C99006C6DD4 /* Build configuration list for PBXNativeTarget "ChangeLanguageTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				38362B5621C11C99006C6DD4 /* Debug */,
@@ -563,7 +703,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		38362B5821C11C99006C6DD4 /* Build configuration list for PBXNativeTarget "TestChangeLanguageUITests" */ = {
+		38362B5821C11C99006C6DD4 /* Build configuration list for PBXNativeTarget "ChangeLanguageUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				38362B5921C11C99006C6DD4 /* Debug */,

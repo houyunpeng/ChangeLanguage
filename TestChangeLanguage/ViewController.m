@@ -9,6 +9,8 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *label;
+@property (weak, nonatomic) IBOutlet UIButton *btn;
 
 @end
 
@@ -17,7 +19,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    LanguageSet(@"label_origin_text", {
+        _label.text = text;
+    });
+    
+    LanguageSet(@"btn_origin_text", {
+        [_btn setTitle:text forState:UIControlStateNormal];
+    });
 }
+- (IBAction)changeLanguageAction:(UIButton*)sender {
+    
+    Lang.currentLang = sender.selected ? @"zh-CN" : @"en-US";
+    
+    sender.selected = !sender.selected;
+    
+    
+    
+}
+
 
 
 @end
