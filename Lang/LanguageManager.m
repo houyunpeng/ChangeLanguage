@@ -130,7 +130,7 @@ static LanguageManager *_instance = nil;
     
     NSString* text = [self getTextWithIndexString:indexString];
     block(text);
-    NSString* key = [NSString stringWithFormat:@"%@__Lang__%lld",indexString,obj.hash];
+    NSString* key = [NSString stringWithFormat:@"%@__Lang__%lu",indexString,(unsigned long)obj.hash];
     
     [self.targetsBlock addObject:@{key:block}];
     
@@ -155,7 +155,6 @@ static NSMutableSet *swizzledClasses() {
         if ([swizzledClasses() containsObject:className]) return;
         
         SEL deallocSel = sel_registerName("dealloc");
-        Method swDeallocMethod = class_getInstanceMethod(obj.class, NSSelectorFromString(@"swDealloc"));
         
         __block void (*deallocBlock)(__unsafe_unretained id, SEL) = NULL;
         
@@ -163,7 +162,7 @@ static NSMutableSet *swizzledClasses() {
             
             NSUInteger hash = ((NSObject*)object).hash;
             
-            [self removeAllTargetWitSuffixKey:[NSString stringWithFormat:@"%lld",hash]];
+            [self removeAllTargetWitSuffixKey:[NSString stringWithFormat:@"%lu",(unsigned long)hash]];
             if (deallocBlock == NULL) {
                 
                 struct objc_super superInfo = {
