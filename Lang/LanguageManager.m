@@ -32,7 +32,6 @@ static LanguageManager *_instance = nil;
         
         _lock = [[NSLock alloc] init];
         
-        _targets = [[NSMutableArray alloc] initWithCapacity:0];
         _currentLang = @"zh-CN";//设置默认语言，可根据所需缓存用户选择的语言
         
         
@@ -138,49 +137,58 @@ static LanguageManager *_instance = nil;
     [self resetDeallocMethodWithInstance:obj];
 }
 
-
+static NSMutableSet *swizzledClasses() {
+    static dispatch_once_t onceToken;
+    static NSMutableSet *swizzledClasses = nil;
+    dispatch_once(&onceToken, ^{
+        swizzledClasses = [[NSMutableSet alloc] init];
+    });
+    
+    return swizzledClasses;
+}
 
 -(void)resetDeallocMethodWithInstance:(NSObject*)obj
 {
-    
-    
-    if ([self containValueOfObject:obj]) {
-        return;
-    }
-//    [_targets addObject:[NSValue valueWithNonretainedObject:obj]];
-    [_targets addObject:makeWeakReference(obj)];
-    
-    
-        SEL deallocSel = sel_registerName("dealloc");
-        Method deallocMethod = class_getInstanceMethod(obj.class, deallocSel);
-    
+    Class targetClass = obj.class;
+    @synchronized (swizzledClasses()) {
+        NSString *className = NSStringFromClass(obj.class);
+        if ([swizzledClasses() containsObject:className]) return;
         
-        __block void (*deallocBlock)(id , SEL) = NULL;
-        id block = NULL;
-        block = ^(NSObject* objc,SEL selector){
-           
-            [self removeAllTargetWitSuffixKey:[NSString stringWithFormat:@"%lld",objc.hash]];
+        SEL deallocSel = sel_registerName("dealloc");
+        Method swDeallocMethod = class_getInstanceMethod(obj.class, NSSelectorFromString(@"swDealloc"));
+        
+        __block void (*deallocBlock)(__unsafe_unretained id, SEL) = NULL;
+        
+        id block = ^(__unsafe_unretained id object){
             
-            [self removeObjectValueWithObj:objc];
+            NSUInteger hash = ((NSObject*)object).hash;
             
-           
-            
-            if (deallocBlock) {
-                deallocBlock(objc,selector);
-            }else{
+            [self removeAllTargetWitSuffixKey:[NSString stringWithFormat:@"%lld",hash]];
+            if (deallocBlock == NULL) {
                 
-                void (*my_objc_msgSend)(id ,SEL) = (void *)objc_msgSend;
+                struct objc_super superInfo = {
+                    .receiver = object,
+                    .super_class = class_getSuperclass(targetClass)
+                };
                 
-                my_objc_msgSend(objc,selector);
-                
+                void (*msgSend)(struct objc_super *, SEL) = (__typeof__(msgSend))objc_msgSendSuper;
+                msgSend(&superInfo, deallocSel);
+            } else {
+                deallocBlock(object, deallocSel);
             }
         };
         IMP blockImp = imp_implementationWithBlock(block);
-    
-    if (!class_addMethod(obj.class, deallocSel, blockImp, "v@:")) {
-        deallocBlock = (__typeof__(deallocBlock))method_setImplementation(deallocMethod, blockImp);
+        
+        if (!class_addMethod(obj.class, deallocSel, blockImp, "v@:")) {
+            Method deallocMethod = class_getInstanceMethod(obj.class, deallocSel);
+            deallocBlock = (__typeof__(deallocBlock))method_getImplementation(deallocMethod);
+            deallocBlock = (__typeof__(deallocBlock))method_setImplementation(deallocMethod, blockImp);
+        }
+        
+        [swizzledClasses() addObject:className];
     }
-
+    
+    return;
     
 }
 
@@ -206,7 +214,7 @@ id weakReferenceNonretainedObjectValue(WeakReference ref) {
         [_lock unlock];
     };
     
-    for (WeakReference reference in _targets) {
+    for (WeakReference reference in swizzledClasses()) {
         
         NSObject* object = weakReferenceNonretainedObjectValue(reference);
         
@@ -221,25 +229,7 @@ id weakReferenceNonretainedObjectValue(WeakReference ref) {
     return NO;
 }
 
--(void)removeObjectValueWithObj:(NSObject*)tempObj
-{
-    [_lock lock];
-    @onExit{
-        [_lock unlock];
-    };
-    
-    NSMutableArray* tempArray = [NSMutableArray arrayWithArray:_targets];
-    
-    [_targets enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        WeakReference reference = (WeakReference)obj;
-        NSObject* object = (NSObject*)weakReferenceNonretainedObjectValue(reference);
-        if (object == tempObj || object == nil) {
-            [tempArray removeObject:reference];
-        }
-    }];
-    _targets = [NSMutableArray arrayWithArray:tempArray];
-    
-}
+
 
 -(void)removeAllTargetWitSuffixKey:(NSString*)tempKey
 {

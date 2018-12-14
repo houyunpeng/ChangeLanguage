@@ -17,6 +17,7 @@
 		38362B4E21C11C99006C6DD4 /* TestChangeLanguageUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38362B4D21C11C99006C6DD4 /* TestChangeLanguageUITests.m */; };
 		38362B5E21C11CFC006C6DD4 /* LanguageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 38362B5C21C11CFC006C6DD4 /* LanguageManager.m */; };
 		38362B6121C138C9006C6DD4 /* lang.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38362B6021C138C8006C6DD4 /* lang.plist */; };
+		38D4E4B421C38761000BC628 /* SecViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D4E4B321C38761000BC628 /* SecViewController.m */; };
 		4B2A30ABC0ED931AD828F1FC /* libPods-TestChangeLanguage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F6A3149503C8FB25242565C /* libPods-TestChangeLanguage.a */; };
 		98976EFAE559BDD16CB8CFB2 /* libPods-TestChangeLanguageTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B705FDF003A2927F76C6B02 /* libPods-TestChangeLanguageTests.a */; };
 		BD102AD5DF58379D6DEE2528 /* libPods-TestChangeLanguageUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 825E50E9511B25A3E4789F69 /* libPods-TestChangeLanguageUITests.a */; };
@@ -61,6 +62,8 @@
 		38362B5D21C11CFC006C6DD4 /* LanguageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanguageManager.h; sourceTree = "<group>"; };
 		38362B5F21C13533006C6DD4 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		38362B6021C138C8006C6DD4 /* lang.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = lang.plist; sourceTree = "<group>"; };
+		38D4E4B221C38761000BC628 /* SecViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecViewController.h; sourceTree = "<group>"; };
+		38D4E4B321C38761000BC628 /* SecViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecViewController.m; sourceTree = "<group>"; };
 		6B705FDF003A2927F76C6B02 /* libPods-TestChangeLanguageTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestChangeLanguageTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		825E50E9511B25A3E4789F69 /* libPods-TestChangeLanguageUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestChangeLanguageUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90DEED1D50A1C3D45040F5C0 /* Pods-TestChangeLanguage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestChangeLanguage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestChangeLanguage/Pods-TestChangeLanguage.debug.xcconfig"; sourceTree = "<group>"; };
@@ -142,6 +145,8 @@
 				38362B2A21C11C97006C6DD4 /* AppDelegate.m */,
 				38362B2C21C11C97006C6DD4 /* ViewController.h */,
 				38362B2D21C11C97006C6DD4 /* ViewController.m */,
+				38D4E4B221C38761000BC628 /* SecViewController.h */,
+				38D4E4B321C38761000BC628 /* SecViewController.m */,
 				38362B5F21C13533006C6DD4 /* PrefixHeader.pch */,
 				38362B2F21C11C97006C6DD4 /* Main.storyboard */,
 				38362B3221C11C99006C6DD4 /* Assets.xcassets */,
@@ -396,6 +401,7 @@
 				38362B2E21C11C97006C6DD4 /* ViewController.m in Sources */,
 				38362B3921C11C99006C6DD4 /* main.m in Sources */,
 				38362B2B21C11C97006C6DD4 /* AppDelegate.m in Sources */,
+				38D4E4B421C38761000BC628 /* SecViewController.m in Sources */,
 				38362B5E21C11CFC006C6DD4 /* LanguageManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

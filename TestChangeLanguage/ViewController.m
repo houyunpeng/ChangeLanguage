@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "SecViewController.h"
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *label;
 @property (weak, nonatomic) IBOutlet UIButton *btn;
@@ -28,6 +28,12 @@
         [_btn setTitle:text forState:UIControlStateNormal];
     });
 }
+
+-(void)dealloc
+{
+    
+}
+
 - (IBAction)changeLanguageAction:(UIButton*)sender {
     
     Lang.currentLang = sender.selected ? @"zh-CN" : @"en-US";
@@ -35,6 +41,11 @@
     sender.selected = !sender.selected;
     
     
+    
+}
+- (IBAction)push:(id)sender {
+    
+    [self.navigationController pushViewController:SecViewController.new animated:YES];
     
 }
 

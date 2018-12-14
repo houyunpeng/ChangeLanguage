@@ -63,7 +63,6 @@ typedef enum : NSUInteger {
 
 @interface LanguageManager : NSObject
 {
-    NSMutableArray* _targets;
     
     NSLock* _lock;
 }
